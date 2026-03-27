@@ -54,6 +54,7 @@ diabetes_identifier/experiments/metrics.json
 .idea/
 *.swp
 *.swo
+.kiro/
 
 # OS
 .DS_Store
