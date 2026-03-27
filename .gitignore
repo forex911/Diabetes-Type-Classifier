@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.hypothesis/
+htmlcov/
+.coverage
+coverage.xml
+
+# ML artifacts
+diabetes_identifier/models/*.pkl
+diabetes_identifier/models/bert_classifier/
+diabetes_identifier/models/ensemble_weights.json
+diabetes_identifier/data/processed/
+diabetes_identifier/data/raw/ehr_synthetic.csv
+
+# DVC cache
+.dvc/cache/
+.dvc/tmp/
+
+# MLflow
+mlruns/
+
+# Experiments
+diabetes_identifier/experiments/metrics.json
+
+# Env / secrets
+.env
+.env.*
+*.key
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

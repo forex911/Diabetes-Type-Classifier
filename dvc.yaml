@@ -1,0 +1,30 @@
+stages:
+  prepare_data:
+    cmd: python -m diabetes_identifier.utils.generate_mock_data
+    deps:
+      - diabetes_identifier/utils/generate_mock_data.py
+    outs:
+      - diabetes_identifier/data/raw/ehr_synthetic.csv
+
+  preprocess:
+    cmd: python -m diabetes_identifier.utils.data_loader
+    deps:
+      - diabetes_identifier/data/raw/ehr_synthetic.csv
+      - diabetes_identifier/utils/data_loader.py
+      - diabetes_identifier/nlp/preprocessing.py
+    outs:
+      - diabetes_identifier/data/processed/
+
+  train:
+    cmd: python -m diabetes_identifier.models.train
+    deps:
+      - diabetes_identifier/data/processed/
+      - diabetes_identifier/models/train.py
+      - diabetes_identifier/nlp/embedding.py
+    outs:
+      - diabetes_identifier/models/
+    metrics:
+      - diabetes_identifier/experiments/metrics.json:
+          cache: false
+    params:
+      - diabetes_identifier/utils/config.py:
