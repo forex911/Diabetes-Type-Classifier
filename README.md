@@ -38,17 +38,17 @@
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                  Ensemble Classifier                        │
-│   ┌──────────────────────┐   ┌──────────────────────┐      │
-│   │  Structured Model    │   │   BERT Classifier    │      │
-│   │  (LogisticRegression)│   │ (Bio_ClinicalBERT)   │      │
-│   └──────────────────────┘   └──────────────────────┘      │
+│   ┌──────────────────────┐   ┌──────────────────────┐       │
+│   │  Structured Model    │   │   BERT Classifier    │       │
+│   │  (LogisticRegression)│   │ (Bio_ClinicalBERT)   │       │
+│   └──────────────────────┘   └──────────────────────┘       │
 │              Weighted Probability Fusion                    │
 └─────────────────────────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │              Data Processing Pipeline                       │
-│   Data Ingestion → NLP Preprocessing → Feature Extraction  │
+│   Data Ingestion → NLP Preprocessing → Feature Extraction   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -65,8 +65,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/diabetes-classifier.git
-   cd diabetes-classifier
+   git clone https://github.com/forex911/diabetes-type-classifier.git
+   cd diabetes-type-classifier
    ```
 
 2. **Install dependencies**
